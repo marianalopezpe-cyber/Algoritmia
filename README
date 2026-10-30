@@ -1,0 +1,87 @@
+Ejercicio saludo, Ejucución 1:
+
+Entrada
+	¿Como te llamas?
+	Sofia
+Salida
+	Hola, Sofia. Bienvenido/a a Algoritmia
+	
+Ejucución 2:
+
+Entrada
+	¿Como te llamas?
+	Mariana
+Salida
+	Hola, Mariana. Bienvenido/a a Algoritmia
+	
+-------------------------------------------------------------
+
+Ejercicio Edad en dias, Ejucución 1:
+
+Entrada
+	¿Cuantos años tienes?
+	28
+Salida
+	Has vivido 10220 dias
+	
+Ejucución 2:
+
+Entrada
+	¿Cuantos años tienes?
+	15
+Salida
+	Has vivido 5475 dias
+	
+-------------------------------------------------------------
+
+Ejercicio Propinas, Ejucución 1:
+
+Entrada
+	Ingrese el valor de la cuenta
+	500.000
+	¿Cuantas personas son?
+	3
+Salida
+	La propina es: 50.000
+	El Total de la cuenta es: 550.000
+	Cada uno paga: $183.333333333
+	
+Ejucución 2:
+
+Entrada
+	Ingrese el valor de la cuenta
+	200.850
+	¿Cuantas personas son?
+	7
+Salida
+	La propina es: 20.085
+	El Total de la cuenta es: 220.935
+	Cada uno paga: $31.5621428571
+	
+-------------------------------------------------------------
+
+Ejercicio Promedio Notas, Ejucución 1:
+
+Entrada
+	Ingrese la primera nota (0 a 5)
+	2.8
+	Ingrese la segunda nota (0 a 5)
+	4.2
+	Ingrese la tercera nota (0 a 5)
+	0.7
+Salida
+	el promedio de las tres notas es: 2.566666666
+	
+Ejucución 2:
+
+Entrada
+	Ingrese la primera nota (0 a 5)
+	3.7
+	Ingrese la segunda nota (0 a 5)
+	1.4
+	Ingrese la tercera nota (0 a 5)
+	4.9
+Salida
+	el promedio de las tres notas es: 3.3333333333
+	
+	
