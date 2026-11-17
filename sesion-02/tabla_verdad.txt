@@ -1,0 +1,158 @@
+TABLA DE VERDAD - ALGORITMO VALIDARREGISTRO
+
+DESCRIPCION:
+El algoritmo permite validar el registro de una persona teniendo en cuenta dos condiciones:
+1. Tener una edad mayor o igual a 14 años.
+2. Aceptar los terminos respondiendo con la letra "S".
+
+PROPOSICIONES LOGICAS:
+P: La edad es mayor o igual a 14 (edad >= 14).
+Q: La respuesta es igual a "S" (respuesta = "S").
+
+EXPRESION LOGICA:
+P Y Q
+
+TABLA DE VERDAD:
+
++----------------------+----------------------+----------------+---------------------------+
+| P: Edad >= 14        | Q: Respuesta = "S"   | P Y Q          | Resultado                 |
++----------------------+----------------------+----------------+---------------------------+
+| Verdadero (V)        | Verdadero (V)        | Verdadero (V)  | Registro exitoso          |
+| Verdadero (V)        | Falso (F)            | Falso (F)      | No puedes registrarte     |
+| Falso (F)            | Verdadero (V)        | Falso (F)      | No puedes registrarte     |
+| Falso (F)            | Falso (F)            | Falso (F)      | No puedes registrarte     |
++----------------------+----------------------+----------------+---------------------------+
+
+EJEMPLOS PRACTICOS:
+
++------+------------+----------------+----------------------+---------------------------+
+| Edad | Respuesta  | Condicion P    | Condicion Q          | Resultado                 |
++------+------------+----------------+----------------------+---------------------------+
+| 18   | S          | Verdadero (V)  | Verdadero (V)        | Registro exitoso          |
+| 18   | N          | Verdadero (V)  | Falso (F)            | No puedes registrarte     |
+| 12   | S          | Falso (F)      | Verdadero (V)        | No puedes registrarte     |
+| 12   | N          | Falso (F)      | Falso (F)            | No puedes registrarte     |
++------+------------+----------------+----------------------+---------------------------+
+
+----------
+
+DESCRIPCION:
+Una edad es valida si es mayor o igual a 0 y menor o igual a 120.
+La condicion contraria identifica cuando la edad es invalida.
+
+PROPOSICIONES LOGICAS:
+P: La edad es menor que 0 (edad < 0).
+Q: La edad es mayor que 120 (edad > 120).
+
+EXPRESION LOGICA:
+P O Q
+
+TABLA DE VERDAD:
+
++----------------------+----------------------+----------------+---------------------------+
+| P: Edad < 0          | Q: Edad > 120        | P O Q          | Resultado                 |
++----------------------+----------------------+----------------+---------------------------+
+| Verdadero (V)        | Verdadero (V)        | Verdadero (V)  | Edad invalida             |
+| Verdadero (V)        | Falso (F)            | Verdadero (V)  | Edad invalida             |
+| Falso (F)            | Verdadero (V)        | Verdadero (V)  | Edad invalida             |
+| Falso (F)            | Falso (F)            | Falso (F)      | Edad valida               |
++----------------------+----------------------+----------------+---------------------------+
+
+EJEMPLOS PRACTICOS:
+
++------+----------------+----------------------+---------------------------+
+| Edad | Condicion P    | Condicion Q          | Resultado                 |
++------+----------------+----------------------+---------------------------+
+| -5   | Verdadero (V)  | Falso (F)            | Edad invalida             |
+| 0    | Falso (F)      | Falso (F)            | Edad valida               |
+| 25   | Falso (F)      | Falso (F)            | Edad valida               |
+| 120  | Falso (F)      | Falso (F)            | Edad valida               |
+| 121  | Falso (F)      | Verdadero (V)        | Edad invalida             |
++------+----------------+----------------------+---------------------------+
+
+-----------
+
+TABLA DE VERDAD: VALIDACION PARQUEADERO
+Expresion logica: P Y Q
+
++----------------------+----------------------+----------------+---------------------------+
+| P: No es CARRO       | Q: No es MOTO         | P Y Q          | Resultado                 |
++----------------------+----------------------+----------------+---------------------------+
+| V                    | V                    | V              | Tipo invalido              |
+| V                    | F                    | F              | Tipo valido (MOTO)         |
+| F                    | V                    | F              | Tipo valido (CARRO)        |
+| F                    | F                    | F              | No corresponde a CARRO/MOTO|
++----------------------+----------------------+----------------+---------------------------+
+
+NOTA: La ultima combinacion no puede ocurrir para un unico valor de tipo:
+si el tipo fuera simultaneamente CARRO y MOTO no podria ser diferente de ninguno.
+La tabla muestra las combinaciones logicas posibles en abstracto.
+
+TABLA DE CONDICION: VALIDACION DE LOS MINUTOS
+
+Condicion: minutos < 0
+
++----------+---------------------------+
+| Minutos  | Resultado                 |
++----------+---------------------------+
+| -10      | V - Error                  |
+| -1       | V - Error                  |
+| 0        | F - Valido                 |
+| 15       | F - Valido                 |
+| 60       | F - Valido                 |
+| 120      | F - Valido                 |
++----------+---------------------------+
+
+TABLA DE CONDICION: PRIMEROS 15 MINUTOS
+
+Condicion: minutos <= 15
+
++----------+---------------------------+----------------+
+| Minutos  | Resultado                 | Cobro          |
++----------+---------------------------+----------------+
+| 0        | V                         | $0             |
+| 10       | V                         | $0             |
+| 15       | V                         | $0             |
+| 16       | F                         | Se calcula     |
+| 60       | F                         | Se calcula     |
+| 90       | F                         | Se calcula     |
++----------+---------------------------+----------------+
+
+TABLA DE CONDICION: HORAS O FRACCIONES ADICIONALES
+
+Condicion: residuo > 0
+
++----------+---------------------------+---------------------------+
+| Residuo  | Resultado                 | Accion                    |
++----------+---------------------------+---------------------------+
+| 0        | F                         | No suma horas             |
+| 1        | V                         | Suma una hora             |
+| 15       | V                         | Suma una hora             |
+| 30       | V                         | Suma una hora             |
+| 59       | V                         | Suma una hora             |
++----------+---------------------------+---------------------------+
+
+TABLA DE CONDICION: COBRO MAXIMO
+
+Condicion: total > 30000
+
++----------+---------------------------+---------------------------+
+| Total    | Resultado                 | Accion                    |
++----------+---------------------------+---------------------------+
+| $10.000  | F                         | Mantiene el valor         |
+| $20.000  | F                         | Mantiene el valor         |
+| $30.000  | F                         | Mantiene el valor         |
+| $35.000  | V                         | Limita a $30.000          |
+| $40.000  | V                         | Limita a $30.000          |
++----------+---------------------------+---------------------------+
+
+TABLA DE CONDICION: FACTURA Y DESCUENTO
+
+Condicion: factura = "S"
+
++----------+---------------------------+---------------------------+
+| Factura  | Resultado                 | Accion                    |
++----------+---------------------------+---------------------------+
+| S        | V                         | Aplica 50% de descuento   |
+| N        | F                         | No aplica descuento       |
++----------+---------------------------+---------------------------+
